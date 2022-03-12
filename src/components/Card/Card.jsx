@@ -1,3 +1,4 @@
+import "./Card.css";
 import { useNavigate } from "react-router-dom";
 
 function Card({idDrink, immagine, nome, alcolico}){
@@ -10,7 +11,7 @@ function Card({idDrink, immagine, nome, alcolico}){
             navigazione("/drinks/"+idDrink);
         }}>
 
-            <img src={immagine}/>
+            <img className="immagineDrink" src={immagine} alt={nome}/>
             <h2 className="nomeDrink">{nome}</h2>
             <h4 className="drinkAlcolico">{alcolico}</h4>
         </div>
