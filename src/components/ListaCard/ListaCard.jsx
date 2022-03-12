@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./ListaCard.css"
 import Card from "../Card/Card";
 
 function ListaCard({filtro}){
