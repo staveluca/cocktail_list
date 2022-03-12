@@ -1,11 +1,28 @@
 import './App.css';
-import Input from './components/Input/Input';
+import Home from './screens/Home';
+import NotFound from "./screens/NotFound";
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Input />
-    </div>
+      //Strade percorribili con Home (lista intera), DrinkCard (dettagli drink) e NotFound (tutto il resto)
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/" 
+            element={<Home />} />
+
+          <Route
+            path="*"
+            element={<NotFound/>} />
+        </Routes>
+      </BrowserRouter>
+
   );
 }
 
