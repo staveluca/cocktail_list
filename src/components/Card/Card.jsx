@@ -6,13 +6,13 @@ function Card({idDrink, immagine, nome, alcolico}){
     
     return(
         //al click della card si apre la pagina con descrizione del drink
-        <div className="card" onClick={function (){
+        <div className="containerCard" onClick={function (){
             navigazione("/drinks/"+idDrink);
         }}>
 
             <img src={immagine}/>
-            <h2 className="nome">{nome}</h2>
-            <h4 className="alcolico">{alcolico}</h4>
+            <h2 className="nomeDrink">{nome}</h2>
+            <h4 className="drinkAlcolico">{alcolico}</h4>
         </div>
     )
 }

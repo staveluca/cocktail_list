@@ -45,7 +45,7 @@ function ListaCard({filtro}){
     
 
     return(
-        <div className="container">
+        <div className="containerLista">
             {/*map degli elementi all'interno della lista e passaggio delle proprietà*/}
             {
                 lista.map((item) => (
