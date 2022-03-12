@@ -1,0 +1,57 @@
+.containerCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    border-radius: 5px;
+    background-color: #F5F5F5;
+    box-shadow: 0px 0px 15px #D5D5D5;
+
+    transition: all 1s ease;
+}
+
+.immagineDrink{
+    width: 400px;
+    height: auto;
+
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px #AAA;
+
+    transition: all 1s ease;
+}
+
+.containerCard:hover{
+    cursor: pointer;
+    background-color: #D5D5D5;
+    box-shadow: 0px 0px 15px #C5C5C5;
+}
+
+.containerCard:hover .immagineDrink{
+    width: 420px;
+    height: auto;
+}
+
+.nomeDrink{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    margin-bottom: 0;
+
+    border-radius: 5px;
+    border-bottom: 1px solid #ECECEC;
+
+    color: #333;
+    text-shadow: 0px 0px 5px #B3B3B3;
+}
+
+.drinkAlcolico{
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    font-style: italic;
+    margin-top: 0;
+
+    color: #333;
+}
