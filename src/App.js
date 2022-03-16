@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './screens/Home';
 import NotFound from "./screens/NotFound";
+import Drinks from './screens/Drinks';
 import { useEffect, useState } from "react";
 
 import {
@@ -33,9 +34,13 @@ function App() {
     //Strade percorribili con Home (lista intera), DrinkCard (dettagli drink) e NotFound (tutto il resto)
     <BrowserRouter>
       <Routes>
-         <Route
+        <Route
           path="/" 
           element={<Home />} />
+
+        <Route
+          path="/drinks/:idDrink" 
+          element={<Drinks />} />
 
         <Route
           path="*"
