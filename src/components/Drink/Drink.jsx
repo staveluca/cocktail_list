@@ -50,6 +50,10 @@ function Drink({idDrink}){
                     </div>
 
                     <div className="right">
+                        
+                        <h2 className="prep">Preparazione:</h2>
+                        <p className="preparazione">{drink.strInstructionsIT}</p>
+
                         <h2 className="ingr">Ingredienti:</h2>
                         <ul className="listaIngr">
                             {
@@ -84,9 +88,6 @@ function Drink({idDrink}){
                                 })
                             }
                         </ul>
-
-                        <h2 className="prep">Preparazione:</h2>
-                        <p className="preparazione">{drink.strInstructionsIT}</p>
                         
                     </div>
                 </div>
