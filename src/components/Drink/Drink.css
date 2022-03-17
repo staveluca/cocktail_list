@@ -1,8 +1,21 @@
 .drink{
     display: flex;
     align-items: flex-start;
+    gap: 100px;
+
+    background: url("../../../images/list.jpg") no-repeat;
+    background-size: cover;
+}
+
+.cover{
+    display: flex;
+    align-items: flex-start;
     padding: 20px;
     gap: 100px;
+
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: 2;
+    background-size: cover;
 }
 
 .left{
@@ -27,7 +40,7 @@
 }
 
 .nomeSingolo{
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 32px;
     margin-bottom: 0;
 
@@ -36,7 +49,7 @@
 }
 
 .categoriaSingolo{
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 21px;
     font-style: italic;
     font-weight: 100;
@@ -46,7 +59,7 @@
 }
 
 .bicchiereSingolo{
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     font-style: italic;
     font-weight: 100;
@@ -54,7 +67,7 @@
 }
 
 .ingr, .prep{
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 21px;
     text-transform: uppercase;
     opacity: 0.4;
@@ -64,11 +77,11 @@
 }
 
 .listaIngr{
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 21px;
     list-style: none;
     padding-left: 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .misure{
@@ -79,6 +92,87 @@
 }
 
 .preparazione{
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-    font-size: 21px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+
+.ingrediente{
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 80px;
+    
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #E5E5E5;
+    
+    background: url("../../../images/list.jpg") no-repeat;
+    background-size: cover;
+
+    position: relative;
+}
+
+.tilt{
+    display: inline-block;
+}
+
+.overlay{
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 2;
+    background-size: cover;
+    padding: 20px;
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgIngr{
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(3px 3px 10px #666);
+}
+
+.titoloIngr{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 24px;
+    margin: 12px auto;
+}
+
+.aggiungi{
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    margin: 0;
+
+    border-radius: 50%;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+    box-shadow: 0 0 5px #AAA;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 220px;
+}
+
+.aggiungi:hover{
+    box-shadow: 1px 1px 10px #000;
+}
+
+.imgAggiungi{
+    width: 40px;
+    height: 40px;
+
+    background: url("../../../images/shop.png") no-repeat;
+    background-position: center;
+}
+
+.imgAggiungi:hover{
+    cursor: pointer;
 }
