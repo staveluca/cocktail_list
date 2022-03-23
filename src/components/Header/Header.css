@@ -1,0 +1,101 @@
+.headerContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 150px;
+    padding: 20px 75px;
+    border-bottom: 0.5px solid #C4C4C4;
+}
+
+
+
+/*--------------- LOGO ---------------*/
+.logo{
+    display: flex;
+    align-items: flex-end;
+}
+
+.logoC{
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+
+    margin: 0;
+}
+
+.logoW{
+    font-family: Mrs Saint Delafield;
+    font-size: 32px;
+    font-weight: lighter;
+
+    margin: 0;
+    position: relative;
+    top: 30px;
+    transform: rotate(-15deg);
+}
+
+
+
+/*--------------- BUTTONS ---------------*/
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+/*--------------- SHOP & LIKE ---------------*/
+.headerLike, .headerShop{
+    height: 50px;
+    width: 50px;
+
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #919191;
+}
+
+.headerLike{
+    background: url("../../../images/like.png") no-repeat;
+    background-position: center;
+}
+
+.headerShop{
+    background: url("../../../images/shop.png") no-repeat;
+    background-position: center;
+}
+
+.headerLike:hover{
+    background: url("../../../images/likeW.png") no-repeat;
+    background-position: center;
+}
+
+.headerShop:hover{
+    background: url("../../../images/shopW.png") no-repeat;
+    background-position: center;
+}
+
+
+
+/*--------------- RANDOM ---------------*/
+.random{
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #919191;
+
+    width: 210px;
+    height: 50px;
+
+    font-family: Quicksand;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.random:hover, .headerLike:hover, .headerShop:hover{
+    background-color: #333;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ECECEC;
+}
