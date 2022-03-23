@@ -3,9 +3,10 @@
     justify-content: space-between;
     align-items: center;
 
-    height: 150px;
+    height: 80px;
     padding: 20px 75px;
-    border-bottom: 0.5px solid #C4C4C4;
+    
+    background-color: #C4C4C4;
 }
 
 
@@ -48,7 +49,7 @@
 
 
 /*--------------- SHOP & LIKE ---------------*/
-.headerLike, .headerShop{
+.contLike, .contShop{
     height: 50px;
     width: 50px;
 
@@ -57,23 +58,25 @@
     box-shadow: 1px 1px 3px #919191;
 }
 
+.contLike:hover, .contShop:hover{
+    background-color: #f1dfd1;
+    background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+    cursor: pointer;
+}
+
 .headerLike{
+    height: 50px;
+    width: 50px;
+
     background: url("../../../images/like.png") no-repeat;
     background-position: center;
 }
 
 .headerShop{
+    height: 50px;
+    width: 50px;
+
     background: url("../../../images/shop.png") no-repeat;
-    background-position: center;
-}
-
-.headerLike:hover{
-    background: url("../../../images/likeW.png") no-repeat;
-    background-position: center;
-}
-
-.headerShop:hover{
-    background: url("../../../images/shopW.png") no-repeat;
     background-position: center;
 }
 
@@ -85,6 +88,8 @@
     border-radius: 10px;
     box-shadow: 1px 1px 3px #919191;
 
+    background-color: #C4C4C4;
+
     width: 210px;
     height: 50px;
 
@@ -93,9 +98,9 @@
     font-weight: bold;
 }
 
-.random:hover, .headerLike:hover, .headerShop:hover{
-    background-color: #333;
+.random:hover{
+    background-color: #f1dfd1;
+    background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
     border-radius: 10px;
     cursor: pointer;
-    color: #ECECEC;
 }

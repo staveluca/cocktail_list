@@ -1,58 +1,101 @@
 .containerCard{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
-    padding: 10px;
+    width: 210px;
+    height: 350px;
+    padding-top: 10px;
+    margin-bottom: 30px;
+    position: relative;
 
-    border-radius: 5px;
-    background-color: #F5F5F5;
-    box-shadow: 0px 0px 15px #000;
-
-    transition: all 1s ease;
-}
-
-.immagineDrink{
-    width: 400px;
-    height: auto;
-
-    border-radius: 5px;
-    box-shadow: 0px 0px 15px #AAA;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background-color: #D9D9D9;
+    box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.25);
 
     transition: all 1s ease;
 }
 
 .containerCard:hover{
+    width: 220px;
+    height: 360px;
+
     cursor: pointer;
-    background-color: orange;
-    box-shadow: 0px 0px 15px #BE5504;
+
+    background-color: #fffffc;
+    background-image: linear-gradient(315deg, #fffffc 0%, #beb7a4 74%);
 }
 
 .containerCard:hover .immagineDrink{
-    width: 420px;
-    height: auto;
+    width: 200px;
+    height: 210px;
+}
 
-    box-shadow: 0px 0px 10px #BE5504;
+.containerCard:hover .headerLikeCard{
+    display: block;
+}
+
+/*--------------- IMG & TITLE CARD ---------------*/
+.immagineDrink{
+    width: 190px;
+    height: 200px;
+
+    border-radius: 10px;
+    border: 1px solid #333;
+
+    transition: all 1s ease;
 }
 
 .nomeDrink{
-    font-size: 32px;
-    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
 
-    border-radius: 5px;
-    border-bottom: 1px solid #ECECEC;
+    padding: 23px 10px 12px 10px;
+    margin: 0;
 
     color: #333;
     text-shadow: 0px 0px 5px #B3B3B3;
 }
 
-.drinkAlcolico{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 100;
-    font-size: 24px;
-    font-style: italic;
-    margin-top: 0;
 
-    color: #333;
+
+/*--------------- LIKE CARD ---------------*/
+.headerLikeCard{
+    display: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    border: 1px solid #333;
+    background-color: #ECECEC;
+    box-shadow: 1px 1px 3px rgba(51, 51, 51, 0.25);
+
+    position: absolute;
+    bottom: -30px;
+}
+
+.headerLikeCard:hover{
+    width: 65px;
+    height: 65px;
+
+    background-color: #f1dfd1;
+    background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
+    
+    box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.25);
+}
+
+.headerLikeCard:hover .headerLikeCardIcon{
+    width: 65px;
+    height: 65px;
+}
+
+.headerLikeCardIcon{
+    width: 60px;
+    height: 60px;
+    background: url("../../../images/like.png") no-repeat;
+    background-position: center;
 }

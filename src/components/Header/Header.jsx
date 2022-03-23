@@ -12,8 +12,12 @@ function Header(){
             </div>
 
             <div className="buttons">
-                <button className="headerLike"></button>
-                <button className="headerShop"></button>
+                <div className="contLike">
+                    <div className="headerLike"></div>
+                </div>
+                <div className="contShop">
+                    <div className="headerShop"></div>
+                </div>
 
                 <button className="random" onClick={function(){
                     navigazione("/drinks/random");

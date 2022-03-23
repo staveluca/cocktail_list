@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "./Home.css";
 import ListaCard from '../components/ListaCard/ListaCard';
 import Input from '../components/Input/Input';
 import Header from '../components/Header/Header';
@@ -11,16 +12,19 @@ function Home() {
         <div className="Home">
             <Header />
             
-            <Input
-                onChange={function(val){
-                console.log(val);
-                setValue(val);
-                }}
-            />
-
-            <ListaCard
-                filtro={value}
-            />
+            <div className="main">
+                <Input
+                    className="inpotHome"
+                    onChange={function(val){
+                    console.log(val);
+                    setValue(val);
+                    }}
+                />
+                <ListaCard
+                    filtro={value}
+                />
+            </div>
+            
             
         </div>
     )
