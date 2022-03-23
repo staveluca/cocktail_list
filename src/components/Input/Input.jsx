@@ -1,10 +1,8 @@
 import "./Input.css"
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 
 function Input({onChange}){
     const [valore, setValore] = useState("");
-    const navigazione = useNavigate();
 
     return(
         <div className="containerNome">
@@ -24,10 +22,6 @@ function Input({onChange}){
                     }}
                 />
             </div>
-
-            <button className="random" onClick={function(){
-                navigazione("/drinks/random");
-            }}>RANDOM</button>
         </div>
     )
 }

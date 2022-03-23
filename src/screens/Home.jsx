@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ListaCard from '../components/ListaCard/ListaCard';
 import Input from '../components/Input/Input';
+import Header from '../components/Header/Header';
 
 function Home() {
     
@@ -8,6 +9,8 @@ function Home() {
 
     return (
         <div className="Home">
+            <Header />
+            
             <Input
                 onChange={function(val){
                 console.log(val);
