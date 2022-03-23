@@ -1,8 +1,29 @@
 .containerNome{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    height: 14vh;
+}
+
+.input{
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.random{
+    background-color: inherit;
+    border: 1px solid #000;
+    padding: 8px 16px;
+    border-radius: 5px;
+}
+
+.random:hover{
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
 }
 
 .cercaNome{
