@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: Quicksand, Mrs Saint Delafield;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url("../Quicksand/Quicksand-VariableFont_wght.ttf");
+  src: local('Quicksand') format('truetype');
+}
+
+@font-face {
+  font-family: 'Mrs Saint Delafield';
+  src: url("../Mrs_Saint_Delafield/MrsSaintDelafield-Regular.ttf");
+  src: local('Mrs Saint Delafield') format('truetype');
 }

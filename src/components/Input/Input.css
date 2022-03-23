@@ -4,6 +4,8 @@
     align-items: center;
     padding: 0 60px;
     height: 14vh;
+    background-color: #ECECEC;
+    border-bottom: 0.5px solid #C4C4C4;
 }
 
 .input{
@@ -29,7 +31,9 @@
 .cercaNome{
     font-size: 24px;
     font-weight: 600;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Quicksand;
+    font-weight: 900;
+    text-transform: uppercase; 
 
     margin: 10px;
     padding: 5px;
