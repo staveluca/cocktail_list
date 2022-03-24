@@ -51,63 +51,94 @@ function Drink({idDrink}){
     return(
         <div>
             {/*cambio della lingua da navbar*/}
-            <Navbar
-                onLinguaChange={function(l){
-                setLingua(l);
-            }}/>
+            <Navbar />
 
             <div className="drink">
-                <div className="cover">
-                    <div className="left">
-                        <img className="imgSingolo" src={drink.strDrinkThumb}/>
-                        <h1 className="nomeSingolo">{drink.strDrink}</h1>
-                        <h3 className="categoriaSingolo">{drink.strCategory}</h3>
-                        <p className="bicchiereSingolo">Da servire in: <b>{drink.strGlass}</b></p>
-                        {/*refresh solo se si è già in random*/}
-                        {idDrink== 'random' ? <div className="random" onClick={function(){fetchDrink()}}>REFRESH</div> : ' '}
+                <div className="cardSingolo">
+                    <img className="imgSingolo" src={drink.strDrinkThumb}/>
+                    <h1 className="nomeSingolo">{drink.strDrink}</h1>
+                    <div className="altro">
+                        <div className="categoriaSingolo">
+                            <h3 className="categoria">Categoria:</h3>
+                            <h3 className="cat">{drink.strCategory}</h3>
+                        </div>
+                        <div className="bicchiereSingolo">
+                            <p className="bicchiere">Bicchiere:</p>
+                            <p className="bicch">{drink.strGlass}</p>
+                        </div>
+                    </div>
+                    
+                    {/*refresh solo se si è già in random*/}
+                    {idDrink== 'random' ? <div className="random" onClick={function(){fetchDrink()}}>REFRESH</div> : ' '}
+
+                    <div className="contLikeDrink">
+                        <div className="likeDrink"></div>
+                    </div>
+                </div>
+
+                <div className="right">
+                        
+                    <h2 className="prep">Preparazione:</h2>
+                    <p className="preparazione">{drink[lingua]}</p>
+
+                    <div className="lingue">
+                        <div
+                            className={"italiano "+(lingua==='strInstructionsIT' ? ' ' : 'disable')}
+                            onClick={function(){
+                                setLingua("strInstructionsIT");
+                            }}
+                        ></div>
+
+                        <div
+                            className={"inglese "+(lingua==='strInstructions' ? ' ' : 'disable')}
+                            onClick={function(){
+                                setLingua("strInstructions");
+                            }}
+                        ></div>
+
+                        <div
+                            className={"tedesco "+(lingua==='strInstructionsDE' ? ' ' : 'disable')}
+                            onClick={function(){
+                                setLingua("strInstructionsDE");
+                            }}
+                        ></div>
                     </div>
 
-                    <div className="right">
-                        
-                        <h2 className="prep">Preparazione:</h2>
-                        <p className="preparazione">{drink[lingua]}</p>
-
-                        <h2 className="ingr">Ingredienti:</h2>
-                        <ul className="listaIngr">
-                            {
-                                //map degli ingredienti da visualizzare con immagini relative e misure (se non ci sono inserisce "-")
-                                ingredienti.map(function(indice){
-                                    if(drink['strIngredient'+indice]){
-                                        return (
-                                            <Tilt key={indice} className="tilt">
-                                                <li className="ingrediente">
+                    <h2 className="ingr">Ingredienti:</h2>
+                    <ul className="listaIngr">
+                        {
+                            //map degli ingredienti da visualizzare con immagini relative e misure (se non ci sono inserisce "-")
+                            ingredienti.map(function(indice){
+                                if(drink['strIngredient'+indice]){
+                                    return (
+                                        <Tilt key={indice} className="tilt">
+                                            <li className="ingrediente">
                                                     
-                                                    <div className="overlay">
+                                                <div className="overlay">
                                                     
-                                                        <img
-                                                            className="imgIngr"
-                                                            src={"https://www.thecocktaildb.com/images/ingredients/"+(drink['strIngredient'+indice])+"-medium.png"}
-                                                            alt="ingrediente"
-                                                        />
-                                                        <h4 className="titoloIngr">{(drink['strIngredient'+indice])}</h4>
-                                                        <span className="misure">
-                                                            {(drink['strMeasure'+indice])||'-'}
-                                                        </span>
+                                                    <img
+                                                        className="imgIngr"
+                                                        src={"https://www.thecocktaildb.com/images/ingredients/"+(drink['strIngredient'+indice])+"-medium.png"}
+                                                        alt="ingrediente"
+                                                    />
+                                                    <h4 className="titoloIngr">{(drink['strIngredient'+indice])}</h4>
+                                                    <span className="misure">
+                                                        {(drink['strMeasure'+indice])||'-'}
+                                                    </span>
 
-                                                        <div className="aggiungi">
-                                                            <div className="imgAggiungi"></div>
-                                                        </div>
+                                                    <div className="aggiungi">
+                                                        <div className="imgAggiungi"></div>
                                                     </div>
+                                                </div>
                                                     
-                                                </li>
-                                            </Tilt>
-                                        )
-                                    }else return null;
-                                })
-                            }
-                        </ul>
+                                            </li>
+                                        </Tilt>
+                                    )
+                                }else return null;
+                            })
+                        }
+                    </ul>
                         
-                    </div>
                 </div>
             </div>
         </div>

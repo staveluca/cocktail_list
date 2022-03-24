@@ -1,5 +1,5 @@
 .navbar{
-    height: 50px;
+    height: 80px;
 
     background-color: #C4C4C4;
 
@@ -11,68 +11,11 @@
 
 .back{
     background:  url("../../../images/arrow.png") no-repeat;
-    width: 41px;
-    height: 32px;
-    filter: drop-shadow(2px 2px 8px #000);
-    transform: scale(80%);
+    width: 50px;
+    height: 30px;
+    filter: drop-shadow(0 0 3px #333);
 }
 
-.shop{
-    background:  url("../../../images/shop.png") no-repeat;
-    width: 40px;
-    height: 40px;
-    transform: scale(70%);
-}
-
-.back:hover, .shop:hover{
+.back:hover{
     cursor: pointer;
-}
-
-.lingue{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.italiano{
-    width: 25px;
-    height: 25px;
-    background: url("../../../images/italiano.jpg");
-    background-position: center;
-    background-size: cover;
-
-    box-shadow: 0 0 10px #000;
-    border-radius: 50%;
-}
-
-.inglese{
-    width: 25px;
-    height: 25px;
-    background: url("../../../images/inglese.jpg");
-    background-position: center;
-    background-size: cover;
-
-    box-shadow: 0 0 10px #000;
-    border-radius: 50%;
-}
-
-.tedesco{
-    width: 25px;
-    height: 25px;
-    background: url("../../../images/tedesco.jpg");
-    background-position: center;
-    background-size: cover;
-
-    box-shadow: 0 0 10px #000;
-    border-radius: 50%;
-}
-
-.italiano:hover, .tedesco:hover, .inglese:hover{
-    cursor: pointer;
-}
-
-.disable{
-    opacity: 0.5;
-    box-shadow: 1px 1px 10px #000;
 }

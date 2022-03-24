@@ -1,10 +1,8 @@
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 function Navbar({onLinguaChange}){
     const navigazione = useNavigate();
-    const [lingua, setLingua] = useState("strInstructions");
 
     return(
         //Navbar con bottone back, selezione lingua e shop
@@ -13,25 +11,19 @@ function Navbar({onLinguaChange}){
                 navigazione("/");
             }}></div>
 
-            <div className="lingue">
-                <div className={"italiano "+(lingua==='strInstructionsIT' ? ' ' : 'disable')} onClick={function(){
-                  setLingua("strInstructionsIT");
-                  onLinguaChange("strInstructionsIT");
-                  
-                }}></div>
-
-                <div className={"inglese "+(lingua==='strInstructions' ? ' ' : 'disable')} onClick={function(){
-                    setLingua("strInstructions");
-                    onLinguaChange("strInstructions");
-                }}></div>
-
-                <div className={"tedesco "+(lingua==='strInstructionsDE' ? ' ' : 'disable')} onClick={function(){
-                    setLingua("strInstructionsDE");
-                    onLinguaChange("strInstructionsDE");
-                }}></div>
+            <div className="logo">
+                <h1 className="logoC">cocktail</h1>
+                <h2 className="logoW">Wiki</h2>
             </div>
             
-            <div className="shop"></div>
+            <div className="buttons">
+                <div className="contLike">
+                    <div className="headerLike"></div>
+                </div>
+                <div className="contShop">
+                    <div className="headerShop"></div>
+                </div>
+            </div>
         </div>
     )
 }
