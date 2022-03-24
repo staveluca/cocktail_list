@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 
-function Navbar({onLinguaChange}){
+function Navbar(){
     const navigazione = useNavigate();
 
     return(

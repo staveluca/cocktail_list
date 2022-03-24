@@ -69,10 +69,12 @@ function Drink({idDrink}){
                     </div>
                     
                     {/*refresh solo se si è già in random*/}
-                    {idDrink== 'random' ? <div className="random" onClick={function(){fetchDrink()}}>REFRESH</div> : ' '}
+                    <div className="buttons">
+                        {idDrink== 'random' ? <div className="random" onClick={function(){fetchDrink()}}>REFRESH</div> : ' '}
 
-                    <div className="contLikeDrink">
-                        <div className="likeDrink"></div>
+                        <div className="contLikeDrink">
+                            <div className="likeDrink"></div>
+                        </div>
                     </div>
                 </div>
 
