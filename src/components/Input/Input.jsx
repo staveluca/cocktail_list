@@ -1,8 +1,11 @@
 import "./Input.css"
 import { useState } from "react";
+import { useSelector } from 'react-redux';
 
 function Input({onChange}){
     const [valore, setValore] = useState("");
+
+    const carrello = useSelector(state => state.carrello.ingredienti);
 
     return(
         <div className="inputContainer">
@@ -23,25 +26,15 @@ function Input({onChange}){
                 />
             </div>
 
-            <div className="containerIngr">
-                <h1 className="cercaIngr">
-                    Cerca in base agli ingredienti
-                </h1>
-
-                <input
-                    type="text"
-                    className="inputIngr"
-                    placeholder="Es. Vodka"
-                />
-            </div>
-
             <div className="buttons">
                 <div className="contLike">
                     <div className="headerLike"></div>
                 </div>
                 
                 <div className="contShop">
-                    <div className="headerShop"></div>
+                    <div className="headerShop">
+                        <div className="toBuy">{carrello?.length}</div>
+                    </div>
                 </div>
             </div>
         </div>

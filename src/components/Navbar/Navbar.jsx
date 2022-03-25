@@ -1,8 +1,11 @@
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function Navbar({onRefresh}){
     const navigazione = useNavigate();
+
+    const carrello = useSelector(state => state.carrello.ingredienti);
 
     return(
         //Navbar con bottone back, selezione lingua e shop
@@ -21,7 +24,9 @@ function Navbar({onRefresh}){
                     <div className="headerLike"></div>
                 </div>
                 <div className="contShop">
-                    <div className="headerShop"></div>
+                    <div className="headerShop">
+                        <div className="toBuy">{carrello?.length}</div>
+                    </div>
                 </div>
 
                 <div className="refresh" onClick={onRefresh}>

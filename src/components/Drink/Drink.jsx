@@ -3,10 +3,15 @@ import "./Drink.css";
 import Tilt from "react-parallax-tilt";
 import Navbar from "../Navbar/Navbar";
 
+import { useDispatch } from "react-redux";
+import { addIngredienti } from "../../slices/carrello";
+
 function Drink({idDrink}){
     const [drink, setDrink] = useState ([]);
     const [errore,setErrore] = useState("");
     const [lingua, setLingua] = useState("strInstructions");
+    
+    const dispatch = useDispatch();
 
     //effect per utilizzo funzione fetch al cambio di id
     useEffect(()=>{
@@ -51,7 +56,7 @@ function Drink({idDrink}){
     return(
         <div>
             {/*refresh solo se si è già in random*/}
-            <Navbar onRefresh={fetchDrink}/>
+            <Navbar onRefresh={fetchDrink} />
 
             <div className="drink">
                 <div className="cardSingolo">
@@ -124,7 +129,9 @@ function Drink({idDrink}){
                                                     </span>
 
                                                     <div className="aggiungi">
-                                                        <div className="imgAggiungi"></div>
+                                                        <div className="imgAggiungi" onClick={() => {
+                                                            dispatch(addIngredienti(drink));
+                                                        }}></div>
                                                     </div>
                                                 </div>
                                                     

@@ -1,8 +1,11 @@
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function Header(){
     const navigazione = useNavigate();
+
+    const carrello = useSelector(state => state.carrello.ingredienti);
 
     return(
         <div className="headerContainer">
@@ -16,7 +19,9 @@ function Header(){
                     <div className="headerLike"></div>
                 </div>
                 <div className="contShop">
-                    <div className="headerShop"></div>
+                    <div className="headerShop">
+                        <div className="toBuy">{carrello?.length}</div>
+                    </div>
                 </div>
 
                 <div className="random" onClick={function(){
