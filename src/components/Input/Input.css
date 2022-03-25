@@ -4,15 +4,16 @@
     justify-content: center;
     align-items: flex-start;
     gap: 120px;
+    padding-top: 70px;
 }
 
-.containerNome, .containerIngr{
+.containerNome{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.cercaNome, .cercaIngr{
+.cercaNome{
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
@@ -24,7 +25,7 @@
     text-shadow: 1px 1px 5px #B3B3B3;
 }
 
-.inputNome, .inputIngr{
+.inputNome{
     font-size: 21px;
     font-weight: 100;
     
@@ -39,11 +40,11 @@
     box-shadow: 1px 1px 3px #DEDEDE;
 }
 
-.inputNome::placeholder, .inputIngr::placeholder{
+.inputNome::placeholder{
     color: #C4C4C4;
 }
 
-.inputNome:hover, .inputIngr:hover{
+.inputNome:hover{
     cursor:text;
     box-shadow: 1px 1px 10px #DEDEDE;
 }

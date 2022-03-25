@@ -4,7 +4,8 @@
     align-items: flex-start;
     gap: 150px;
 
-    padding: 70px 70px;
+    padding: 0 70px;
+    padding-bottom: 70px;
 
     background-color: #D9D9D9;
 }

@@ -9,6 +9,9 @@
     padding: 10px 30px;
 }
 
+
+
+/*--------------- BACK ARROW ---------------*/
 .back{
     background:  url("../../../images/arrow.png") no-repeat;
     width: 50px;
@@ -20,6 +23,9 @@
     cursor: pointer;
 }
 
+
+
+/*--------------- REFRESH ARROW ---------------*/
 .refresh{
     border: 1px solid #333;
     border-radius: 10px;
@@ -47,4 +53,24 @@
     background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
     border-radius: 10px;
     cursor: pointer;
+}
+
+
+
+/*--------------- TO BUY COUNTER ---------------*/
+.toBuy{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #333;
+
+    background-color: #fec84e;
+    background-image: linear-gradient(315deg, #fec84e 0%, #ffdea8 74%);
+    border: 1px solid #333;
+    box-shadow: 1px 1px 3px #919191;
+    border-radius: 50%;
+
+    position: relative;
+    left: 40px;
+    top:-10px;
 }

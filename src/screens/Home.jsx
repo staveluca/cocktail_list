@@ -16,8 +16,8 @@ function Home() {
                 <Input
                     className="inpotHome"
                     onChange={function(val){
-                    console.log(val);
-                    setValue(val);
+                        console.log(val);
+                        setValue(val);
                     }}
                 />
                 <ListaCard
