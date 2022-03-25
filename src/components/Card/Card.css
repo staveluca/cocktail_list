@@ -16,6 +16,24 @@
     box-shadow: 2px 2px 5px rgba(51, 51, 51, 0.25);
 
     transition: all 1s ease;
+
+    animation-name: slideCards;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes slideCards{
+    0%{
+        position: relative;
+        top: 0%;
+    }
+
+    100%{
+        position: relative;
+        top: -350%;
+    }
 }
 
 .containerCard:hover{
