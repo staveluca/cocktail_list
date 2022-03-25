@@ -50,8 +50,8 @@ function Drink({idDrink}){
 
     return(
         <div>
-            {/*cambio della lingua da navbar*/}
-            <Navbar />
+            {/*refresh solo se si è già in random*/}
+            <Navbar onRefresh={fetchDrink}/>
 
             <div className="drink">
                 <div className="cardSingolo">
@@ -67,22 +67,17 @@ function Drink({idDrink}){
                             <p className="bicch">{drink.strGlass}</p>
                         </div>
                     </div>
-                    
-                    {/*refresh solo se si è già in random*/}
-                    <div className="buttons">
-                        {idDrink== 'random' ? <div className="random" onClick={function(){fetchDrink()}}>REFRESH</div> : ' '}
-
-                        <div className="contLikeDrink">
-                            <div className="likeDrink"></div>
-                        </div>
+                        
+                    <div className="contLikeDrink">
+                        <div className="likeDrink"></div>
                     </div>
                 </div>
 
                 <div className="right">
-                        
                     <h2 className="prep">Preparazione:</h2>
                     <p className="preparazione">{drink[lingua]}</p>
 
+                    {/*cambio della lingua*/}
                     <div className="lingue">
                         <div
                             className={"italiano "+(lingua==='strInstructionsIT' ? ' ' : 'disable')}

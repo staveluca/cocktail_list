@@ -1,7 +1,7 @@
 import "./Navbar.css";
 import { useNavigate } from "react-router-dom";
 
-function Navbar(){
+function Navbar({onRefresh}){
     const navigazione = useNavigate();
 
     return(
@@ -22,6 +22,10 @@ function Navbar(){
                 </div>
                 <div className="contShop">
                     <div className="headerShop"></div>
+                </div>
+
+                <div className="refresh" onClick={onRefresh}>
+                    <div className="refreshIcon"></div>
                 </div>
             </div>
         </div>

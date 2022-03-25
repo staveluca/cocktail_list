@@ -19,9 +19,11 @@ function Header(){
                     <div className="headerShop"></div>
                 </div>
 
-                <button className="random" onClick={function(){
+                <div className="random" onClick={function(){
                     navigazione("/drinks/random");
-                }}>RANDOM</button>
+                }}>
+                    <div className="randomIcon"></div>
+                </div>
             </div>
         </div>
     )
