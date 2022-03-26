@@ -23,6 +23,8 @@
 
     color: #333;
     text-shadow: 1px 1px 5px #B3B3B3;
+
+    animation: fadeIn 2s linear;
 }
 
 .inputNome{
@@ -38,6 +40,8 @@
     border: none;
     border-radius: 10px;
     box-shadow: 1px 1px 3px #DEDEDE;
+
+    animation: fadeIn 2s linear;
 }
 
 .inputNome::placeholder{

@@ -23,6 +23,8 @@
     font-weight: bold;
 
     margin: 0;
+
+    animation: fadeIn 2s linear;
 }
 
 .logoW{
@@ -34,6 +36,30 @@
     position: relative;
     top: 30px;
     transform: rotate(-15deg);
+
+    animation: fadeIn 2s linear;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    25%{
+        opacity: 0.25;
+    }
+
+    50%{
+        opacity: .5;
+    }
+
+    75%{
+        opacity: 0.75;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
 
 
@@ -44,6 +70,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 25px;
+
+    animation: fadeIn 2s linear;
 }
 
 
