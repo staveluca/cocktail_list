@@ -6,6 +6,7 @@ function Navbar({onRefresh}){
     const navigazione = useNavigate();
 
     const carrello = useSelector(state => state.carrello.ingredienti);
+    const salvati = useSelector(state => state.salvati.salvati);
 
     return(
         //Navbar con bottone back, selezione lingua e shop
@@ -21,11 +22,13 @@ function Navbar({onRefresh}){
             
             <div className="buttons">
                 <div className="contLike">
-                    <div className="headerLike"></div>
+                    <div className="headerLike">
+                        <div className={"toBuy "+ (salvati?.length>0 ? '' : 'zero')}>{salvati?.length}</div>
+                    </div>
                 </div>
                 <div className="contShop">
                     <div className="headerShop">
-                        <div className="toBuy">{carrello?.length}</div>
+                        <div className={"toBuy "+ (carrello?.length>0 ? '' : 'zero')}>{carrello?.length}</div>
                     </div>
                 </div>
 

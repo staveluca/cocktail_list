@@ -2,16 +2,24 @@ import { useState,useEffect } from "react";
 import "./Drink.css";
 import Tilt from "react-parallax-tilt";
 import Navbar from "../Navbar/Navbar";
+import React, { Component } from 'react';
 
 import { useDispatch } from "react-redux";
 import { addIngredienti } from "../../slices/carrello";
+import { addSalvati } from "../../slices/salvati";
 
-function Drink({idDrink}){
+function Drink ({idDrink}){
     const [drink, setDrink] = useState ([]);
     const [errore,setErrore] = useState("");
     const [lingua, setLingua] = useState("strInstructions");
+    const [isActive, setActive] = useState(false);
     
     const dispatch = useDispatch();
+    const dispatch2 = useDispatch();
+
+    const toggleClass = () => {
+        setActive(!isActive);
+    };
 
     //effect per utilizzo funzione fetch al cambio di id
     useEffect(()=>{
@@ -74,7 +82,9 @@ function Drink({idDrink}){
                     </div>
                         
                     <div className="contLikeDrink">
-                        <div className="likeDrink"></div>
+                        <div className="likeDrink" onClick={function() {
+                            dispatch2(addSalvati(drink));
+                        }}></div>
                     </div>
                 </div>
 
@@ -128,10 +138,11 @@ function Drink({idDrink}){
                                                         {(drink['strMeasure'+indice])||'-'}
                                                     </span>
 
-                                                    <div className="aggiungi">
-                                                        <div className="imgAggiungi" onClick={() => {
-                                                            dispatch(addIngredienti(drink));
-                                                        }}></div>
+                                                    <div className="aggiungi" onClick={function(){
+                                                        toggleClass();
+                                                        dispatch(addIngredienti(drink));
+                                                        }}>
+                                                        <div className={isActive ? 'imgAggiungi' : null}></div>
                                                     </div>
                                                 </div>
                                                     
